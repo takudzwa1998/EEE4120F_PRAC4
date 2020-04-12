@@ -6,7 +6,8 @@ module WallClock(
     input[2:0] button,
     //outputs
     output [7:0] SS_CAT,//SevenSegment
-    output [3:0] SS_AN //Segment Drivers
+    output [3:0] SS_AN, //Segment Drivers
+    output wire [5:0] LED
 	
 );
     integer hr_r=0;
@@ -15,7 +16,7 @@ module WallClock(
     integer min_l=0;
     integer inc =0;
     integer button0, button1, button2;
-    integer inc2;
+    integer sec=0;
     
 
 	//Add the t
@@ -28,22 +29,16 @@ module WallClock(
 	
 	//The main logic
 	always @(posedge CLK100MHZ) begin
-	
 	   inc<=inc+1;
-	   inc2<=inc2+1;
-	   
-	    if(inc2 >=1000000) begin
-	      button0 <= button[0];
-	      button1 <= button[1];
-	      button2 <= button[2];  
-	       inc2  <= 0; 
+	    if(inc >=100000000) begin
+	        sec <= sec + 1;
+	        if(sec == 59) begin
+	            min_l<=min_l+1; 
+	            sec<=0;
+	        end
+	     inc  <= 0; 
 	   end
-	   
-	     if(button0)begin
-	   min_r <= min_r + 1;
-	   
-	   end
-
 	end
+	 assign LED[5:0] = sec;
 	
 endmodule  
