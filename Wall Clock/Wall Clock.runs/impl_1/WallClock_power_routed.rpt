@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date             : Sun Apr 12 12:15:32 2020
+| Date             : Sun Apr 19 12:05:45 2020
 | Host             : Takudzwa-Shumba running 64-bit major release  (build 9200)
 | Command          : report_power -file WallClock_power_routed.rpt -pb WallClock_power_summary_routed.pb -rpx WallClock_power_routed.rpx
 | Design           : WallClock
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.106        |
+| Total On-Chip Power (W)  | 0.105        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.009        |
+| Dynamic (W)              | 0.008        |
 | Device Static (W)        | 0.097        |
 | Effective TJA (C/W)      | 4.6          |
 | Max Ambient (C)          | 84.5         |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.001 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      170 |       --- |             --- |
-|   LUT as Logic |    <0.001 |       41 |     63400 |            0.06 |
-|   CARRY4       |    <0.001 |       26 |     15850 |            0.16 |
-|   Register     |    <0.001 |       89 |    126800 |            0.07 |
+| Clocks         |     0.002 |        3 |       --- |             --- |
+| Slice Logic    |    <0.001 |      566 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      173 |     63400 |            0.27 |
+|   CARRY4       |    <0.001 |       81 |     15850 |            0.51 |
+|   Register     |    <0.001 |      247 |    126800 |            0.19 |
 |   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |    <0.001 |      135 |       --- |             --- |
-| I/O            |     0.007 |       20 |       210 |            9.52 |
+| Signals        |    <0.001 |      420 |       --- |             --- |
+| I/O            |     0.006 |       20 |       210 |            9.52 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.106 |          |           |                 |
+| Total          |     0.105 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,7 +71,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.017 |       0.002 |      0.015 |
+| Vccint    |       1.000 |     0.018 |       0.003 |      0.015 |
 | Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |
 | Vcco33    |       3.300 |     0.006 |       0.002 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -140,7 +140,7 @@ Table of Contents
 +-----------+-----------+
 | Name      | Power (W) |
 +-----------+-----------+
-| WallClock |     0.009 |
+| WallClock |     0.008 |
 +-----------+-----------+
 
 

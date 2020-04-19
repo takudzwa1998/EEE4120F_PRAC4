@@ -18,8 +18,6 @@ proc create_report { reportName command } {
   }
 }
 set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -34,6 +32,7 @@ set_property ip_output_repo {c:/Users/tshum/OneDrive/Documents/FINAL_YEAR/1st_Se
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   {C:/Users/tshum/OneDrive/Documents/FINAL_YEAR/1st_Semester/EEE4120F_HPEC/prac_four/Prac4/Wall Clock/BCD_Decoder.v}
+  {C:/Users/tshum/OneDrive/Documents/FINAL_YEAR/1st_Semester/EEE4120F_HPEC/prac_four/Prac4/Wall Clock/Debounce.v}
   {C:/Users/tshum/OneDrive/Documents/FINAL_YEAR/1st_Semester/EEE4120F_HPEC/prac_four/Prac4/Wall Clock/SS_Driver.v}
   {C:/Users/tshum/OneDrive/Documents/FINAL_YEAR/1st_Semester/EEE4120F_HPEC/prac_four/Prac4/Wall Clock/Clock.v}
 }
